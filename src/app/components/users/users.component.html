@@ -1,0 +1,14 @@
+<p>users works!</p>
+<ul>
+    <li *ngFor="let user of userData">{{user.id}} - {{user.name}} - {{user.fire_id}} 
+        <button (click)="deleteUser(user)">Obrisi korisnika</button>
+     </li>
+    
+    
+</ul>
+<div>
+    Name:<input type="text" [(ngModel)]="user.name"><br>
+    id: <input type="number" [(ngModel)]="user.id"><br>
+    <button (click)="addData()">Dodaj korisnik</button>
+    
+</div>
