@@ -1,0 +1,160 @@
+@import '../../../assets/styles/styles';
+
+app-header{
+    position: fixed;
+    width: 100%;
+    top:0px  
+}
+.main{
+    margin-top: 60px;
+    display: flex;
+}
+.left{
+     position: fixed;
+     width: 27%;
+     display: inline-block; 
+     top:53px;
+     left: 0;
+     overflow-y: scroll;
+     height: 100%;
+   //  border: 2px solid black;
+}
+.right{
+    position: fixed;
+    top:53px;
+    width: 69%;
+    display: inline-block;
+    background-color: rgb(238, 237, 237);
+    border-left: 2px solid rgba(244, 242, 242, 0.705);
+    right: 0;
+    overflow-y: scroll;
+    max-height: 90%;
+    //border: 2px solid black;
+}
+ input[type='text']{
+    width: 57%;
+    border-radius: 25px;
+    padding: 12px;
+    border: none;  
+    :focus{
+        border: none;
+        outline: none;
+    }
+    :active{
+        border: none;
+        outline: none;
+    }
+}
+.test{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding:10px;
+}
+.fa-microphone{
+    position: relative;
+    left: -27px;
+}
+.cl-gr{
+    color: $gray;
+}
+.i-out{
+    display: inline-block;
+}
+.i-out > i{
+    margin-left: 10px;
+}
+.img-client{
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.messagges img{
+    border: 2px solid black;
+    top: 0px;
+    color: rgb(0, 0, 0);
+}
+.container-msg{
+    margin-bottom: 200px;
+}
+.container-msg > img{
+    display: inline-block;
+    z-index: 12;
+    width: 50%;
+}
+.conv-started{
+    text-align: center;
+    font-style: italic;
+    color: $gray;
+    margin-bottom: 6rem;
+    margin-top:3em;
+}
+.message {
+    margin-left: 1%;
+}
+
+.subhead{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index:3;
+    box-shadow: 1px 1px 1px rgb(233, 233, 233);
+}
+.subhead img{
+    display: inline-block !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin:0.4rem;
+}
+.grp{
+    display: inline-block;
+   // border: 1px solid black;
+    vertical-align: middle;
+    position: relative;
+   
+}
+
+.rgt{
+    text-align: right;
+}
+.replaybox{
+    background-color: rgb(213, 209, 209);
+    border-radius: 5px;
+    padding: 8px; 
+    margin-right: 5px;
+    display: block;
+    width:  90%;
+    
+}
+.replaybox > h6 {
+    margin-bottom: 7px;
+}
+.replaybox > p{
+    max-width: 70%;
+}
+.fgr{
+    color: $gray;
+}
+.test .at{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    color: $gray;
+   
+}
+.test .inp{
+    
+    outline: 2px solid transparent;
+   transition: outline 0.24s ease-in-out;
+    &:hover{
+        cursor: default ;
+        outline: 2px solid rgb(203, 205, 210);
+    }
+    &:focus{
+        cursor: text;
+        border: none;
+    
+        outline: 2px solid rgb(199, 199, 202);
+    }
+}

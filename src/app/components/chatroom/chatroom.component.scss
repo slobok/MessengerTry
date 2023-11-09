@@ -1,0 +1,54 @@
+.grp{
+    margin-left: 3px;
+    margin-top: 5px;
+    padding: 2%;
+}
+.date{
+    float: right;
+    opacity: 0.6;
+}
+h4 > title{
+    font-weight: bold;
+}
+p.message{
+    opacity: 0.6;
+    overflow: hidden;
+    max-width: 80%;
+    text-overflow: ellipsis;
+    width: fit-content;
+    white-space: nowrap;
+    display: inline-block;  
+}
+.grp{
+   // border: 1px solid black;
+    border-radius: 7px;
+    background-color: rgb(236, 237, 239);
+
+}
+.grp:hover{
+    cursor: pointer;
+}
+
+.head{
+    padding-bottom: 15px;
+}
+ img{
+    display: inline-block;
+    width: 17%;
+    border-radius: 50%;
+}
+.number{
+    border-radius: 50%;
+    background-color: rgb(84, 131, 197);
+    color: white;
+    border: 1px solid black;
+    padding: 7px;
+    display: inline-block;
+    margin-left: 3%;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: bold;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+}

@@ -48,8 +48,4 @@ deleteUser(user: User){
   return deleteDoc(userDocRef)
 }
 
-
-
-
-
 }

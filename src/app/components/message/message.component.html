@@ -1,0 +1,22 @@
+
+<div class="container" style="display: flex;">
+    <img src="../../../assets/images/test.jpg" alt="">
+<div class="message"> 
+    <h5>{{ message.sender }}</h5>
+    <div class="replayMessage" *ngIf="message.replayToMessage">
+        <h5>{{ replayMessage.sender }}</h5>
+        <p class="content">{{ replayMessage.text }}</p>
+    </div>
+    <p class="content">{{ message.text }}</p>
+    <p class="date">{{ message.date }}</p> 
+</div>
+<div class='rghthC'>
+    <ul>
+        <li>Replay</li>
+        <li>Copy text</li>
+        <li>Forward</li>
+        <li>Select</li>
+        <li>Delete</li>
+</ul>
+</div>
+</div>
