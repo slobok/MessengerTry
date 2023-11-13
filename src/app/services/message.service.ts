@@ -6,12 +6,14 @@ import {
   collection,
   collectionData,
   deleteDoc,
-  doc
+  doc,
+  query
   } 
  from '@angular/fire/firestore';
 import { Message } from '../model/Message';
 import { Chatroom } from '../model/Chatroom';
 import { Observable } from 'rxjs';
+import { orderBy } from 'firebase/firestore';
 
 
 @Injectable({
@@ -23,7 +25,7 @@ export class MessageService {
 
   getMessages(chatroom: Chatroom): Observable< Message[] >{
     const collectionInstance = collection(this.fireStore,`Chatroom/${chatroom.fire_id}/Message`);
-    return collectionData(collectionInstance,{idField: 'fire_id'}) as Observable < Message[] >;
+    return collectionData(query(collectionInstance,orderBy('date')),{idField: 'fire_id'}) as Observable < Message[] >;
   }
   sendMessage(message: Message,chatroom :Chatroom){
     const collectionInstance = collection(this.fireStore,`Chatroom/${chatroom.fire_id}/Message`);
