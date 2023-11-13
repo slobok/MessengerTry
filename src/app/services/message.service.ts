@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { 
+  CollectionReference,
   Firestore,
   addDoc,
   collection,
-  collectionData
+  collectionData,
+  deleteDoc,
+  doc
   } 
  from '@angular/fire/firestore';
 import { Message } from '../model/Message';
@@ -16,14 +19,12 @@ import { Observable } from 'rxjs';
 })
 export class MessageService {
 
-  constructor(private fireStore: Firestore) { }
+  constructor(private fireStore: Firestore) {}
 
   getMessages(chatroom: Chatroom): Observable< Message[] >{
     const collectionInstance = collection(this.fireStore,`Chatroom/${chatroom.fire_id}/Message`);
     return collectionData(collectionInstance,{idField: 'fire_id'}) as Observable < Message[] >;
   }
-
-
   sendMessage(message: Message,chatroom :Chatroom){
     const collectionInstance = collection(this.fireStore,`Chatroom/${chatroom.fire_id}/Message`);
     addDoc(collectionInstance,message)
@@ -43,5 +44,11 @@ export class MessageService {
 })
 return  message;
 }
+
+deleteMessage(chatroomFireId: string,messageFireID: string){
+  const collectionInstance = doc(this.fireStore,`Chatroom/${chatroomFireId}/Message/${messageFireID}`);
+  return deleteDoc(collectionInstance);
+}
+
 
 }

@@ -5,6 +5,16 @@ app-header{
     width: 100%;
     top:0px  
 }
+
+app-message{
+    display: inline-block;
+   // border: 1px solid black;
+}
+.iconmo{
+    display: inline-block;
+    border: $borbl;
+
+}
 .main{
     margin-top: 60px;
     display: flex;
@@ -17,25 +27,25 @@ app-header{
      left: 0;
      overflow-y: scroll;
      height: 100%;
-   //  border: 2px solid black;
 }
 .right{
     position: fixed;
     top:53px;
-    width: 69%;
+    width: 73%;
     display: inline-block;
     background-color: rgb(238, 237, 237);
     border-left: 2px solid rgba(244, 242, 242, 0.705);
     right: 0;
     overflow-y: scroll;
-    max-height: 90%;
+    max-height: 94%;
+    min-height: 94%;
     //border: 2px solid black;
 }
  input[type='text']{
-    width: 57%;
+    width: 76%;
     border-radius: 25px;
     padding: 12px;
-    border: none;  
+    border: none; 
     :focus{
         border: none;
         outline: none;
@@ -50,6 +60,7 @@ app-header{
     bottom: 0px;
     width: 100%;
     padding:10px;
+    max-width: 80%;
 }
 .fa-microphone{
     position: relative;
@@ -69,6 +80,14 @@ app-header{
     border-radius: 50%;
     display: inline-block;
 }
+
+.message > i {
+    font-size: 16px;
+    position: relative;
+    top: -40px;
+    right: 510px;
+}
+
 .messagges img{
     border: 2px solid black;
     top: 0px;
@@ -76,6 +95,7 @@ app-header{
 }
 .container-msg{
     margin-bottom: 200px;
+    max-width: 67%;
 }
 .container-msg > img{
     display: inline-block;
@@ -109,12 +129,9 @@ app-header{
 }
 .grp{
     display: inline-block;
-   // border: 1px solid black;
     vertical-align: middle;
-    position: relative;
-   
+    position: relative;  
 }
-
 .rgt{
     text-align: right;
 }
@@ -124,8 +141,8 @@ app-header{
     padding: 8px; 
     margin-right: 5px;
     display: block;
-    width:  90%;
-    
+    width:  87%;
+    margin-right: 3%;   
 }
 .replaybox > h6 {
     margin-bottom: 7px;
@@ -135,18 +152,17 @@ app-header{
 }
 .fgr{
     color: $gray;
+    font-style: italic;
 }
 .test .at{
     cursor: pointer;
     font-weight: bold;
     font-size: 17px;
     color: $gray;
-   
 }
 .test .inp{
-    
-    outline: 2px solid transparent;
-   transition: outline 0.24s ease-in-out;
+    outline: 3px solid transparent;
+    transition: outline 0.24s ease-in-out;
     &:hover{
         cursor: default ;
         outline: 2px solid rgb(203, 205, 210);
@@ -154,7 +170,17 @@ app-header{
     &:focus{
         cursor: text;
         border: none;
-    
-        outline: 2px solid rgb(199, 199, 202);
+          outline: 3px solid rgb(199, 199, 202);
     }
+}
+
+.lin2m {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+.replaym{
+    width: 90%;
 }

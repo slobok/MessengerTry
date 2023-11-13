@@ -1,45 +1,35 @@
 @import './../../../assets/styles/styles';
 
 .message{
-    padding: 8px;
     background-color: white;
-    border-radius: 1.5rem;
-  //  margin-top: 20px;
+    border-radius: 10px;
     margin-left:2px;
     max-width: 50%;    
+    min-width: 400px;
+    margin-right: 11px;  
+    padding: 12px;
+    word-wrap:break-word;
+     
 }
 h5{ 
+    display: inline-block;
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 14px;
 } 
 .content{
-    color: $gray;
-    
-}
-.date{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: $gray;
+    color: $gray;   
 }
 img{
     display: inline-block;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid black;
     width: 50px;
     margin-right: 10px;   
-// position: relative;
-  //  top: -50px; 
 }
 .body-msg{
     display: inline-block;
-    border: 2px solid black;
     width: 76%;
-}
-.message{
-    margin-right: 11px;  
-    padding: 12px; 
 }
 .replayMessage{
     background-color: rgb(217, 233, 237);
@@ -54,15 +44,13 @@ img{
     background-color: white; 
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgb(195, 194, 194);
-    display: inline-block;
-    height: fit-content;
     font-size: 13px;
 }
 .rghthC > ul > li  { 
     cursor: pointer;
     padding: 7px;
-    padding-right: 19px !important;
-    border-bottom: 0.1px solid rgb(219, 216, 216);
+    padding-right: 24px !important;
+    border-bottom: 0.01mm solid rgb(219, 216, 216);
     transition: background-color 0.03s ease-in-out,color 0.03s ease-in-out;
     &:last-child{
         color: red;
@@ -74,5 +62,34 @@ img{
 }
 .container{
   margin-bottom: 12px;
-  
+  display: inline-block;
+}
+.headM{
+  padding: 0px;
+}
+.headM > h5{
+  font-size: 15px;
+  margin: 0;
+}
+.headM > .more{
+    display: inline-block;
+    float: right;
+    padding: 2px;
+    color: $gray;
+   }
+.timedate{
+    font-size: 10px;
+    color: gray;
+   }
+.timedate .date{
+    color: $gray;
+}
+.message > .text{
+    // Treba izmjesti na izmedju svakog div - razmak
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+.text{
+    font-size: 14px;
 }

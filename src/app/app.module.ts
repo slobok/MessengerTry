@@ -16,8 +16,8 @@ import { RightpanalComponent } from './components/rightpanal/rightpanal.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnswerboxComponent } from './components/answerbox/answerbox.component';
 import { LoginComponent } from './components/login/login.component';
-
-
+import {HttpClientModule} from '@angular/common/http'
+  
 
 @NgModule({
   declarations: [
@@ -29,10 +29,10 @@ import { LoginComponent } from './components/login/login.component';
     ChannelsinfoComponent,
     RightpanalComponent,
     AnswerboxComponent,
-    LoginComponent
-    
+    LoginComponent,
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

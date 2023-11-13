@@ -1,7 +1,12 @@
 .grp{
     margin-left: 3px;
-    margin-top: 5px;
     padding: 2%;
+    background-color: rgb(252, 253, 254);
+    border-radius: 7px;
+    border: 1px solid rgb(215, 214, 214);
+    &:hover{
+        cursor: pointer;
+    }
 }
 .date{
     float: right;
@@ -18,15 +23,6 @@ p.message{
     width: fit-content;
     white-space: nowrap;
     display: inline-block;  
-}
-.grp{
-   // border: 1px solid black;
-    border-radius: 7px;
-    background-color: rgb(236, 237, 239);
-
-}
-.grp:hover{
-    cursor: pointer;
 }
 
 .head{
