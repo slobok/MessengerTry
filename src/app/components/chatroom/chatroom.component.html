@@ -4,8 +4,11 @@
             <h5 class="title inbl">{{c.name}}</h5>
             <p class="date inbl">{{ convD.toDateString() }}</p>
         </div>
-        <p class="message">   
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dolor unde a sit?Eos tempore at nobis veritatis sed! At odio architecto placeat labore iure quae ea itaque nostrum.
+        <p class="message" *ngIf="messages[0]">
+          {{  messages[messages.length - 1].text }}  
+        </p>
+        <p class="message" *ngIf="!messages[0]">
+            No messages in chatroom
         </p>
         <span class="number">2</span>
 </div>

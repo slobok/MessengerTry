@@ -68,7 +68,12 @@ export class AppComponent implements OnInit {
     this.chatRoomService.getChatrooms().subscribe(data => {
       this.chatRooms = data;
       //console.log(this.chatRooms);
-      console.log(data);
+      // Dodaj poruke u chatrooms
+      this.chatRooms.forEach(chatroom => {
+        this.messageService.getMessages(chatroom).subscribe(data => {
+          chatroom.Message = data;
+        })
+      })
     })
   }
   getMessages(chatroom: Chatroom){

@@ -1,4 +1,4 @@
-<div class="container" style="display:flex;">
+<div class="container" style="display:flex;" *ngIf="!message.deleted">
     <img src="../../../assets/images/test.jpg" alt=""> 
     <div class="message">
        <div class="headM">
@@ -6,7 +6,7 @@
             <i (click)="showRight()" class="fa fa-ellipsis-v more" aria-hidden="true"></i>
         </div>
         <div class="replayMessage" *ngIf="message.replayToMessage" >
-            <h5>{{replayMessage.sender}}</h5>
+            <h5>{{ replayMessage.sender}}</h5>
             <p class="content">{{ replayMessage.text }}</p>
         </div> 
         <div class="text">
@@ -17,13 +17,17 @@
           <!-- <p class="date">{{ convD.toDateString() }}</p>  --> 
         </div>       
     </div>   
-    <div class='rghthC' *ngIf="displayRight">
+    <div class='rghthC'  *ngIf="displayRight">
         <ul>
             <li (click)="showInReplayBox()">Replay</li>
             <li (click)="copyToClipboard()">Copy text</li>
             <li>Forward</li>
             <li>Select</li>
-            <li (click)="deleteMessage()">Delete</li>
+            <li (click)="updateMessage()">Delete</li>
         </ul>
-    </div>
+    </div>  
+</div>
+<div *ngIf="message.deleted" class="msdelet">
+    <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+    <span>Message deleted</span>
 </div>

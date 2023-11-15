@@ -12,12 +12,19 @@ import { UsersComponent } from './components/users/users.component';
 import { MessageComponent } from './components/message/message.component';
 import { ChatroomComponent } from './components/chatroom/chatroom.component';
 import { ChannelsinfoComponent } from './components/channelsinfo/channelsinfo.component';
-import { RightpanalComponent } from './components/rightpanal/rightpanal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnswerboxComponent } from './components/answerbox/answerbox.component';
 import { LoginComponent } from './components/login/login.component';
 import {HttpClientModule} from '@angular/common/http'
   
+import { ClickOutsideModule } from 'ng-click-outside';
+
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { UsersboxComponent } from './components/usersbox/usersbox.component';
+import { MainComponent } from './components/main/main.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,11 +34,15 @@ import {HttpClientModule} from '@angular/common/http'
     MessageComponent,
     ChatroomComponent,
     ChannelsinfoComponent,
-    RightpanalComponent,
-    AnswerboxComponent,
     LoginComponent,
+    UsersboxComponent,
+    MainComponent
   ],
   imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    ClickOutsideModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,

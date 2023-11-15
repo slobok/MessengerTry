@@ -90,6 +90,20 @@ img{
     margin-bottom: 7px;
     font-size: 14px;
 }
-.text{
-    font-size: 14px;
+.msdelet{
+    margin-left: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $gray;
+    background-color: gainsboro;
+    border-radius: 7px;
+    padding: 7px;
+    padding-right: 25px;
+    &i:hover{
+       cursor: default; 
+    }
+}
+.msdelet > i{
+    margin-right: 5px;
+    
 }

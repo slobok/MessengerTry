@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AnswerboxComponent } from './answerbox.component';
+import { UsersboxComponent } from './usersbox.component';
 
-describe('AnswerboxComponent', () => {
-  let component: AnswerboxComponent;
-  let fixture: ComponentFixture<AnswerboxComponent>;
+describe('UsersboxComponent', () => {
+  let component: UsersboxComponent;
+  let fixture: ComponentFixture<UsersboxComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AnswerboxComponent]
+      declarations: [UsersboxComponent]
     });
-    fixture = TestBed.createComponent(AnswerboxComponent);
+    fixture = TestBed.createComponent(UsersboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

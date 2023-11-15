@@ -14,3 +14,15 @@ i:hover{
 .fbl{
     font-weight: bold;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-menu{
+    background-color: red !important;
+    
+}
+
+mat-menu{
+    border-radius: 50px !important;
+    background-color: yellow !important;
+    font-style: italic !important;
+}

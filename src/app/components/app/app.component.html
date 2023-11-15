@@ -1,27 +1,25 @@
-<!-- <app-header></app-header>
-<router-outlet>
-</router-outlet> -->
+
 <app-header></app-header>
 <div class="container" style="display: flex;">
-
 
 <div class="left">
     <app-chatroom (click)="getMessages(c)" *ngFor="let c of chatRooms" [c]="c"></app-chatroom>
   </div>
   <div class="right" *ngIf="showchatRoomPanel">
     <div class="subhead">
-      <div>
+      <div class="subhp1">
         <img src="../../../assets/images/test.jpg" alt="">
           <div class="grp">
-          <ul>
+            <ul>
               <li class="fbl">{{ chatRoomName }}</li>
               <li class="fgr">{{ chatRoomMembers }} - participants</li>
-          </ul>
-          </div>
+            </ul>
+          </div>  
         <!-- ovjde je potrebno more vert button  -->
       </div>
       <div class="rgt">
-        <i class="fa fa-search"></i>
+        <i class="fa fa-search fa-1x"></i>
+        <i class="movr" class="fa fa-ellipsis-v more" aria-hidden="true"></i>
       </div>
     </div> 
     <p class="conv-started">Conversation started at: </p>

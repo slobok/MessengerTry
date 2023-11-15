@@ -1,6 +1,7 @@
 import { Component,Input,OnInit } from '@angular/core';
 import { Chatroom } from 'src/app/model/Chatroom';
 import { Message } from 'src/app/model/Message';
+import { MessageService } from 'src/app/services/message.service';
 @Component({
   selector: 'app-chatroom',
   templateUrl: './chatroom.component.html',
@@ -9,14 +10,18 @@ import { Message } from 'src/app/model/Message';
 export class ChatroomComponent implements  OnInit {
   
   @Input('c')
-  c?: Chatroom;
-  @Input('messages')
-  messages?: Message[];
+  c: Chatroom;
+  messages: Message[];
   convD : any;
-  
+  constructor(private messageService: MessageService){}
   firsMessage: string;
   ngOnInit(): void {  
     this.convD = convDate(this.c.dateCreated);
+    this.messageService.getMessages(this.c).subscribe(data => {
+      this.messages = data;
+    })
+         
+    
   }
  
 

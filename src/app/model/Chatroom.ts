@@ -1,10 +1,8 @@
-import { Timestamp } from "firebase/firestore";
-import { Message } from "./Message";
-
 export interface Chatroom{
     name?: string;
     dateCreated?: Date;
     members?: any[];
-    Message?: Message[];
     fire_id?: string;
+    
 }
+// Messages nema jer dovlacm iz baze sve podatke o firebaze kroz ova object

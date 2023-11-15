@@ -7,7 +7,8 @@ import {
   collectionData,
   deleteDoc,
   doc,
-  query
+  query,
+  updateDoc
   } 
  from '@angular/fire/firestore';
 import { Message } from '../model/Message';
@@ -50,6 +51,18 @@ return  message;
 deleteMessage(chatroomFireId: string,messageFireID: string){
   const collectionInstance = doc(this.fireStore,`Chatroom/${chatroomFireId}/Message/${messageFireID}`);
   return deleteDoc(collectionInstance);
+}
+
+updateMessage(chatroomFireId: string,messageFireID: string){
+  const collectionInstance = doc(this.fireStore,`Chatroom/${chatroomFireId}/Message/${messageFireID}`);
+  updateDoc(collectionInstance,{'deleted':true})
+  .then(data => {
+      alert('Obrisan poruka');
+  }
+  )
+  .catch(err => {
+    alert('Not deleted message');
+  })
 }
 
 

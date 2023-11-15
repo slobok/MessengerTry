@@ -27,6 +27,7 @@ export class MessageComponent implements OnInit  {
     // event binding
   showInReplayBox(){
     this.newItemEvent.emit();
+    this.displayRight = false;
   }
 
   displayRight:boolean = false;
@@ -57,9 +58,21 @@ export class MessageComponent implements OnInit  {
   //}
 
 copyToClipboard(){
-  // copy just text from message.Ipravi ako treba
+  // copy just text from message.Ispravi ako treba
   this.clipboard.copy(this.message.text);
+  this.displayRight = false;
 }
+
+  close(){
+    if (!this.displayRight){
+      this.displayRight = false;
+    }   
+  }
+
+  updateMessage(){
+    this.messageService.updateMessage(this.chatRoomFireId,this.message.fire_id);
+
+  }
 
   }
   function convDate (a: any): Date{
