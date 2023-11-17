@@ -26,10 +26,10 @@ export class UsersComponent implements OnInit  {
   deleteUser(user: User){
     this.memberService.deleteUser(user)
     .then(() =>{
-      console.log('Successfuuly deleted data');
+      console.log('Succesfully deleted data !!');
     })
     .catch(() => {
-      console.log('Korisnikc nije obrisan');
+      console.log('Korisnik nije obrisan !');
     })
   }
 }

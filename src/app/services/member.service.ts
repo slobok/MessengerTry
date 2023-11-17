@@ -17,7 +17,7 @@ import { deleteDoc, doc } from 'firebase/firestore';
   providedIn: 'root'
 })
 export class MemberService {
-  members: Observable<User[]>;
+  members: Observable< User[] >;
   constructor(private fireStore:Firestore) { }
   
   addData(user:User){
@@ -33,7 +33,7 @@ export class MemberService {
 
   readData(){
     const collectionInstance = collection(this.fireStore,'test');
-    let users :User[];
+    let users: User[];
     collectionData(collectionInstance).subscribe(val => {
       console.log(val);
     })
@@ -41,7 +41,7 @@ export class MemberService {
 //Jedan nacin dodavanja
 getData() :Observable<User[]>{
   const collectionInstance = collection(this.fireStore,'test');
-  return collectionData(collectionInstance,{idField:'fire_id'}) as Observable<User[]>;
+  return collectionData(collectionInstance,{idField: 'fire_id'}) as Observable<User[]>;
 }
 deleteUser(user: User){
   const userDocRef = doc(this.fireStore, `test/${user.fire_id}`);

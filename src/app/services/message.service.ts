@@ -64,6 +64,17 @@ updateMessage(chatroomFireId: string,messageFireID: string){
     alert('Not deleted message');
   })
 }
-
+// Za test.Za korisnika radi umjesto za poruke
+updateMessageSeen(chatroomFireid: string,messageFireID: string ){
+  const collectionInstance = doc(this.fireStore,`Chatroom/${chatroomFireid}/Message/${messageFireID}`);
+  updateDoc(collectionInstance,{'seen': true})
+  .then(data => {
+    console.log('Updated to firebase.Message seen by user');
+  })
+  .catch(err => {
+    console.log('Not updated SEEN STATUS  to firebase.Something went wrong');
+  }
+  )
+}
 
 }

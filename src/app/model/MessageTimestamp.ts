@@ -12,8 +12,5 @@ export class Message{
          return new Date(this.date.seconds * 1000 +
                          this.date.nanoseconds / 1000000);
     }
-    constructor(){
-        this.date = this.convTimestampTODate();
-    }
 }
 

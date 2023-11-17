@@ -1,8 +1,23 @@
-<div>
-    <h4>Login</h4>
+<div class="container">
+    <div class="head">
+        <h1>Login form</h1>
+    </div>
     <div>
-        <p>User</p>
-        
+        <mat-form-field>
+            <mat-label>Enter Name</mat-label>
+            <input matInput [(ngModel)]="user.name">
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="user.password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button (click)="login()">Login</button>
     </div>
 </div>
-

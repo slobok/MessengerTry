@@ -1,1 +1,51 @@
-<p>main works!</p>
+<div class="container" style="display: flex;">
+    <div class="left">
+        <app-chatroom (click)="getMessages(c)" *ngFor="let c of chatRooms" [c]="c"></app-chatroom>
+      </div>
+      <div class="right" *ngIf="showchatRoomPanel">
+        <div class="subhead">
+          <div class="subhp1">
+            <img src="../../../assets/images/test.jpg" alt="">
+              <div class="grp">
+                <ul>
+                  <li class="fbl">{{ chatRoomName }}</li>
+                  <li class="fgr">{{ chatRoomMembers }} - participants</li>
+                </ul>
+              </div>  
+            <!-- ovjde je potrebno more vert button  -->
+          </div>
+          <div class="rgt">
+            <i class="fa fa-search fa-1x"></i>
+            <i class="movr" class="fa fa-ellipsis-v more" aria-hidden="true"></i>
+          </div>
+        </div> 
+        <p class="conv-started">Conversation started at: </p>
+        <div class="container-msg">
+          <div class="message" 
+          inViewport 
+          (inViewportAction)='consoleLogMess(m.text)'
+            *ngFor='let m of messages'>
+            <app-message  [message]="m" [chatRoomFireId]="openedChatroom.fire_id" (newItemEvent)="clickMessage2(m)" [replayMessage]="getReplayMessage(m,messages)" ></app-message>
+          </div> 
+        </div> 
+        <div>
+         
+        </div>  
+        <div class="test">
+          <!--U ovaj replay box neophodno injectovati poruku -->
+          <div class="replaybox" *ngIf="showReplayBox"> 
+            <h5>{{ mess.sender }}</h5>
+            <p class="lin2m">{{ mess.text }}</p>
+            <i class="fa fa-window-close close" aria-hidden="true" (click)="removeReplayBox()"></i>
+           </div> 
+            <span class="at" style="display: inline-block;margin: 7px;">@</span>
+            <input class="inp" type="text" placeholder="Type message" [(ngModel)]="message.text">
+            <i class="fa fa-microphone cl-gr"></i>
+            <div class="i-out">
+                <i class="fa fa-smile-o" style="color:blue;"  aria-hidden="true"></i> 
+                <i class="fa fa-paperclip" aria-hidden="true" style="color:blue;"></i>
+                <i class="fa fa-paper-plane" aria-hidden="true" (click)="sendMessage(message,openedChatroom)"></i>
+            </div>  
+        </div>   
+    </div> 
+    </div>

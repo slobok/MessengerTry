@@ -11,19 +11,21 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './components/users/users.component';
 import { MessageComponent } from './components/message/message.component';
 import { ChatroomComponent } from './components/chatroom/chatroom.component';
-import { ChannelsinfoComponent } from './components/channelsinfo/channelsinfo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import {HttpClientModule} from '@angular/common/http'
-  
+import { MainComponent } from './components/main/main.component';
+import { ProfileComponent } from './components/profile/profile.component';  
 import { ClickOutsideModule } from 'ng-click-outside';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { UsersboxComponent } from './components/usersbox/usersbox.component';
-import { MainComponent } from './components/main/main.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+import { InViewportModule } from 'ng-in-viewport';
 
 
 @NgModule({
@@ -33,12 +35,15 @@ import { MainComponent } from './components/main/main.component';
     UsersComponent,
     MessageComponent,
     ChatroomComponent,
-    ChannelsinfoComponent,
     LoginComponent,
-    UsersboxComponent,
-    MainComponent
+    MainComponent,
+    ProfileComponent,
+    PageNotFoundComponent,
   ],
   imports: [
+    InViewportModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
     MatIconModule,
     MatMenuModule,

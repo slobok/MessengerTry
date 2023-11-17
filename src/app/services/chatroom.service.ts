@@ -10,9 +10,17 @@ export class ChatroomService {
 
   constructor(private fireStore: Firestore) { }
 
-  getChatrooms(): Observable<Chatroom[]>{
+  getChatrooms(): Observable< Chatroom[] >{
     const collectionInstance = collection(this.fireStore,'Chatroom');
-    return collectionData(collectionInstance,{idField: "fire_id"}) as Observable<Chatroom[]>;
+    return collectionData(collectionInstance, { idField: "fire_id"}) as Observable< Chatroom[] >;
   }
-  
+
+  getChatroomByFireid(chatroomFireId: String): Observable< Chatroom >{
+    const collectionInstance = collection(this.fireStore,`Chatroom/${chatroomFireId}`);
+    return collectionData(collectionInstance,{ idField: 'fire_id'}) as Observable< Chatroom >;
+} 
+
+
+
+
 }

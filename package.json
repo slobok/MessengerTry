@@ -23,7 +23,9 @@
     "@angular/router": "^16.2.0",
     "@syncfusion/ej2-angular-splitbuttons": "^23.1.43",
     "firebase": "^10.5.2",
+    "intersection-observer": "^0.12.2",
     "ng-click-outside": "^9.0.1",
+    "ng-in-viewport": "^16.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
